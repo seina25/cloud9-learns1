@@ -1,0 +1,26 @@
+<h1>画像投稿フォーム</h1>
+<%= form_with model: @list, local: true do |f| %>
+  <h4>日付</h4>
+  <%= f.date_field :learning_date %>
+
+  <h4>開始前の目標</h4>
+  <%= f.text_field :learning_target %>
+
+  <h4>学習した内容</h4>
+  <%= f.text_area :learning_record %>
+
+  <h4>カテゴリー</h4>
+  <%#= f.collection_select(:category_id, @categories, :id, :category_name) %>
+
+  <h4>学習時間(h)</h4>
+  <%= f.number_field :learning_time, step: "0.1" %>
+
+  <h4>参考書のタイトル</h4>
+  <%= f.text_field :book_title %>
+
+  <h4>参考書の画像</h4>
+  <%= f.attachment_field :book_image %>
+
+  <%= f.submit '投稿' %>
+
+<% end %>

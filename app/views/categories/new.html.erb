@@ -1,0 +1,9 @@
+<h1>カテゴリの追加</h1>
+<%= form_with model: @category, local: true do |f| %>
+
+ <h4>カテゴリ名</h4>
+ <%= f.text_field :category_name %>
+
+ <%= f.submit "登録" %>
+
+<% end %>
