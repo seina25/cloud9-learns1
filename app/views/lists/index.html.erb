@@ -1,5 +1,6 @@
 <% @lists.each do |list| %>
 <div>
+  <table>
 　<p>投稿ユーザー画像：<%= "後から表示させる" %></p>
   <p>ユーザーネーム：<%= list.user.name %></p>
   <p>日付:<%= list.learning_date %></p>
@@ -9,5 +10,6 @@
   <p>学習時間:<%= list.learning_time %></p>
   <p>参考書:<%= list.book_title %></p>
   <p>参考書の画像<%= attachment_image_tag list, :book_image %></p>
+  </table>
 </div>
 <% end %>
